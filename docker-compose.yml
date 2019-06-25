@@ -33,6 +33,7 @@ services:
   #
   # I've never ran it in a container so I can't endorse doing so.
   node_exporter:
-    image: 'quay.io/prometheus/node-exporter'
+    image: 'prom/node-exporter'
     container_name: 'node_exporter'
-
+    ports:
+      - '9100:9100'
